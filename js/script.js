@@ -1,5 +1,12 @@
 // script.js
-document.getElementById("theme-toggle").addEventListener("click", function() {
-    document.body.classList.toggle("dark-theme");
-    document.body.classList.toggle("light-theme");
-});
+const themeToggle = document.querySelector(".theme-checkbox")
+
+themeToggle.addEventListener('change', function(){
+    if(this.checked){
+        document.body.classList.add("dark-theme");
+        document.body.classList.remove("light-theme");
+    } else {
+        document.body.classList.add("light-theme");
+        document.body.classList.remove("dark-theme");
+    }
+})
