@@ -71,6 +71,99 @@ body {
     --card-border:#f7f7f7;
 }
 
+/* First Interaction (Get User Name) */
+.get_name{
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all ease-in-out 0.8s;
+}
+.get_name .container{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    bottom: 50px;
+    width: fit-content;
+    line-height: 40px;
+    left: -30px;
+    top: -70px;
+}
+
+/* Input */
+.get_name .input-style{
+    padding: 10px;
+    border: 2px solid #6c98ca;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+    width: 250px;
+}
+
+.get_name .input-style:focus{
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button */
+.btn {
+    outline: 0;
+    align-items: center;
+    justify-content: space-between;
+    background: #007bff;
+    width: 120px;
+    height: 45px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: .95;
+}
+
+.btn .animation {
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+}
+
+.get_name .info{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* "fade-out" */
+.get_name.swapped{
+    transform: translateY(-2100px);
+    height: 0px;
+}
+
+/* Change Color */
+.get_name .theme-checkbox{
+    margin-top: 30px;
+    margin-left: 30px;
+}
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
