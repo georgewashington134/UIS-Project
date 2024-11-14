@@ -74,3 +74,58 @@ if (themeToggle) {
         sessionStorage.setItem('theme', themeToggle.checked ? 'dark' : 'light'); // Salva a preferência
     });
 }
+
+// Sugestões
+document.addEventListener('DOMContentLoaded', function() {
+    const formButton = document.getElementById('form_buttom');
+    const formulario = document.querySelector('.formulario');
+    const backButton = document.querySelector('.formulario .back');
+    const user_opinion = document.querySelector('#user_opinion');
+    const body = document.body;
+    const mainElement = document.getElementById('main-content');
+
+    // Função para pegar o nome do usuário sempre que for necessário
+    function getUserName() {
+        return sessionStorage.getItem('userName') || '';
+    }
+
+    // Atualiza o nome de usuário na seção de sugestões
+    function updateUserOpinion() {
+        const user = getUserName();
+        user_opinion.innerHTML = `Nos dê sua opinião ${user}.`;
+    }
+
+    // Atualiza o nome do usuário na tela de boas-vindas
+    const welcome_h1 = document.querySelector(".welcome");
+    const savedUser = getUserName();
+    if (savedUser) {
+        welcome_h1.innerText = `Bem Vindo ${savedUser}!`;
+    }
+
+    // Abrir o formulário
+    formButton.addEventListener('click', function() {
+        formulario.style.display = 'flex';
+        setTimeout(() => { formulario.classList.add('formulario--active'); }, 100);
+        mainElement.classList.add('main-blur'); // Aplica o efeito de blur no conteúdo principal
+        body.classList.add('formulario-active'); // Remove a rolagem horizontal
+        updateUserOpinion(); // Atualiza o nome no formulário
+    });
+
+    // Fechar o formulário
+    backButton.addEventListener('click', function() {
+        formulario.classList.remove('formulario--active');
+        setTimeout(() => { formulario.style.display = 'none'; }, 300);
+        mainElement.classList.remove('main-blur'); // Remove o efeito de blur
+        setTimeout(() => { body.classList.remove('formulario-active'); }, 400); // Restaura a rolagem
+    });
+
+    // Fechar o formulário ao enviar
+    const formSubmit = document.querySelector('form');
+    formSubmit.addEventListener('submit', function(event) {
+        event.preventDefault(); // Previne o envio real do formulário para efeitos de demonstração
+        formulario.classList.remove('formulario--active');
+        setTimeout(() => { formulario.style.display = 'none'; }, 300);
+        mainElement.classList.remove('main-blur');
+        setTimeout(() => { body.classList.remove('formulario-active'); }, 400); // Restaura a rolagem
+    });
+});
