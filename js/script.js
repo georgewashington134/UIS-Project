@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fechar o formulário ao enviar
     const formSubmit = document.querySelector('form');
     formSubmit.addEventListener('submit', function(event) {
+        window.alert(`Obrigado por nos avaliar ${user}`)
         event.preventDefault(); // Previne o envio real do formulário para efeitos de demonstração
         formulario.classList.remove('formulario--active');
         setTimeout(() => { formulario.style.display = 'none'; }, 300);
