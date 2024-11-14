@@ -72,7 +72,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    transition: all ease-in-out 0.8s;
+    transition: all ease-in-out 1.35s;
 }
 .get_name .container{
     position: relative;
@@ -158,7 +158,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s, color 0.3s;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -215,6 +215,8 @@ footer {
     left: 0;
     width: 100%;
   z-index: 1000; /* Garante que o rodapé fique acima de outros elementos */
+    transition: background-color 0.3s, color 0.3s;
+
 }
 
 
@@ -327,6 +329,7 @@ line-height: 25px;
     box-shadow: inset #0000008c 0px 0px 8px 3px;
     margin-top: 20px;
     margin-left: 30px;
+    z-index: 100000;
 }
 
 .theme-checkbox::before {
@@ -354,4 +357,21 @@ line-height: 25px;
 
 .theme-checkbox:checked {
     background-position: 100%;
+}
+
+/* Animação de "push para cima" */
+@keyframes pushUp {
+    0% {
+        transform: translateY(100%); /* Inicia fora da tela (para baixo) */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Volta para sua posição normal */
+        opacity: 1;
+    }
+}
+
+/* Classe de animação para o elemento main */
+.PushUp-animation {
+    animation: pushUp 1s ease-out forwards; /* 1s de duração com efeito 'ease-out' */
 }

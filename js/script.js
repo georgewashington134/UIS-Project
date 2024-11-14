@@ -49,11 +49,15 @@ window.addEventListener('DOMContentLoaded', () => {
             sessionStorage.setItem('userName', user);
             // Exibe a mensagem de boas-vindas
             welcome_h1.innerText = `Bem Vindo ${user}!`;
-            // Oculta a div get_name
-            get_nameDiv.classList.add('swapped');
-            mainElement.style.display = 'block'
-            header.style.display = 'block'
-            header.style.display = 'flex'
+            // Usa setTimeout para adicionar a classe 'swapped' com um atraso
+            get_nameDiv.classList.add('swapped') // Adiciona a classe 'swapped' após 1 segundo
+            setTimeout(() => {
+                mainElement.classList.add('PushUp-animation');
+                header.classList.add('PushUp-animation');
+                mainElement.style.display = 'block'
+                header.style.display = 'block'
+                header.style.display = 'flex'
+            }, 500)
         } else {
             window.alert("Insira seu nome.");
         }
