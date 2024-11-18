@@ -6,6 +6,7 @@ const User_Name = document.querySelector('#User_Name');
 const welcome_h1 = document.querySelector(".welcome");
 const get_nameDiv = document.querySelector('.get_name'); 
 
+
 // Função para aplicar o tema baseado no estado do checkbox
 function applyTheme() {
     if (themeToggle.checked) {
@@ -119,14 +120,43 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => { body.classList.remove('formulario-active'); }, 400); // Restaura a rolagem
     });
 
-    // Fechar o formulário ao enviar
+
+// FeedBack Response
+const FeedBackTextArea = document.getElementById('feedback')
+const likedTextArea = document.getElementById('liked')
+const submitButton = document.getElementById('subited_button')
+const form = document.getElementById('opinionForm')
+
+// Função para verificar se os campos estão preenchidos
+function validateForm(){
+    if(FeedBackTextArea.value.trim() !== '' && likedTextArea.value.trim() !== ''){
+        submitButton.disabled = false;
+    }else{
+        submitButton.disabled = true;
+    }
+}
+// Adiciona eventos de input para validar enquanto o usuário estiver digitando
+FeedBackTextArea.addEventListener('input', validateForm)
+likedTextArea.addEventListener('input', validateForm)
+
+// Evitar o envio do formulário se os campos estiverem vazio (medida extra)
+
+form.addEventListener('submit', (e) => {
+    if(FeedBackTextArea.value.trim() === '' || likedTextArea.value.trim() === ''){
+    e.preventDefault() // impede o envio
+    alert('Por favor, preencha todos os campos antes de enviar a sua opinião.')
+    }else{
+        // Fechar o formulário ao enviar
     const formSubmit = document.querySelector('form');
     formSubmit.addEventListener('submit', function(event) {
-        window.alert('Obrigado por nos avaliar')
         event.preventDefault(); // Previne o envio real do formulário para efeitos de demonstração
         formulario.classList.remove('formulario--active');
         setTimeout(() => { formulario.style.display = 'none'; }, 300);
         mainElement.classList.remove('main-blur');
         setTimeout(() => { body.classList.remove('formulario-active'); }, 400); // Restaura a rolagem
     });
+        window.alert('Obrigado por nos avaliar')
+    }
+})
+
 });

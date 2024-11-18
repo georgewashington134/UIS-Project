@@ -29,7 +29,6 @@
         <nav>
             <ol>
                 <li><a href="home.html">Início</a></li>
-                <li><a href="galery.html">Galeria</a></li>
                 <li id="form_buttom"><a>Sugestões</a></li>
             </ol>
         </nav>
@@ -48,7 +47,7 @@
                         <p><strong>Carreira:</strong> Hair-Stylist</p>
                         <p><strong>Experiências:</strong> R.O.M Concept</p>
                         <p><strong>Escolaridade:</strong> Ensino Superior R.O.M Concept</p>
-                        <a href="integrante1.html" class="conhecer-btn">Conhecer Gregory</a>
+                        <a href="members/gregory/gregory.html" class="conhecer-btn">Conhecer Gregory</a>
                     </div>
                 </div>
 
@@ -119,14 +118,16 @@
     <aside class="formulario">
         <span class="back">→</span>
         <h2 id="user_opinion">Nos dê sua opinião</h2>
-        <form action="" method="get">
-            <textarea name="message" placeholder="No quê podemos melhorar?"></textarea>
-            <textarea name="message" placeholder="O que você mais gostou em nosso site?"></textarea>
-            <button type="submit" class="btn" id="Op_Button"><i class="animation"></i>Enviar Opinião.<i class="animation"></i></button>
+        <form id="opinionForm" action="" method="get">
+            <textarea name="message" id="feedback" placeholder="No quê podemos melhorar?"></textarea>
+            <textarea name="message" id="liked" placeholder="O que você mais gostou em nosso site?"></textarea>
+            <button type="submit"  id="subited_button" class="btn" id="Op_Button"><i class="animation"></i>Enviar Opinião.<i class="animation"></i></button>
         </form>
     </aside>
+    
     <footer>
         <p>© 2024 Nosso Grupo - Todos os direitos reservados.</p>
+        <a href="https://github.com/Neeexy/UIS-Project"><img class="git-hub-icon" src="components/github-icon.webp" alt=""></a>
     </footer>
 
     <script src="js/script.js"></script>

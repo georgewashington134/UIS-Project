@@ -7,24 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../style/styles.css"> <!-- General Style Sheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style/galery.css">
 
 </head>
 <body class="light-theme">
-    <header>
-        <!-- Troca de tema -->
-        <input type="checkbox" class="theme-checkbox">
+    <input type="checkbox" class="theme-checkbox">
 
-        <h1>Gregory Hardy</h1>
+    <header id="header">
+        <!-- Troca de tema -->
+asd
+        <h1>Conheça Gre</h1>
         <nav>
             <ol>
                 <li><a href="home.html">Início</a></li>
-                <li><a href="galery.html">Galeria</a></li>
-                <li><a href="register.html">Cadastro</a></li>
+                <li id="form_buttom"><a>Sugestões</a></li>
+                <li id="galery_button"><a>Galeria</a></li>
             </ol>
         </nav>
-
     </header>
+
+    <div class="galery">
+        <div class="galery_images">
+            <ol>
+                <li><img src="galery/pexels-francesco-ungaro-96428.jpg" alt=""></li>
+                <li><img src="galery/pexels-ingewallu-177809 (1).jpg" alt=""></li>
+                <li><img src="galery/pexels-ingewallu-177809.jpg" alt=""></li> 
+                <li><img src="galery/pexels-kerber-774731.jpg" alt=""></li>
+                <li><img src="galery/pexels-pixabay-208984.jpg" alt=""></li>
+                <li><img src="galery/pexels-ingewallu-177809.jpg" alt=""></li>
+            </ol>
+        </div>
+    </div>
+
+
+    <aside class="formulario">
+        <span class="back">→</span>
+        <h2 id="user_opinion">Nos dê sua opinião</h2>
+        <form action="" method="get">
+            <textarea name="message" placeholder="No quê podemos melhorar?"></textarea>
+            <textarea name="message" placeholder="O que você mais gostou em nosso site?"></textarea>
+            <button type="submit" class="btn" id="Op_Button"><i class="animation"></i>Enviar Opinião.<i class="animation"></i></button>
+        </form>
+    </aside>
+
+
     <footer>
         <p>© 2024 Nosso Grupo - Todos os direitos reservados.</p>
     </footer>
