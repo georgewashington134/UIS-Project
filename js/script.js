@@ -17,11 +17,18 @@ function applyTheme() {
         document.body.classList.remove("dark-theme");
     }
 }
+// Evento para alternar o tema e salvar a preferência no sessionStorage
+if (themeToggle) {
+    themeToggle.addEventListener('change', function () {
+        applyTheme(); // Aplica o tema baseado no estado do checkbox
+        sessionStorage.setItem('theme', themeToggle.checked ? 'dark' : 'light'); // Salva a preferência
+    });
+}
 
 // Aplica o tema ao carregar a página
 window.addEventListener('DOMContentLoaded', () => {
     const savedUser = sessionStorage.getItem('userName');
-
+    
     // Verifica se o tema está salvo no sessionStorage
     const savedTheme = sessionStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -64,17 +71,11 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
     // Evento de clique para o botão SwapButton
     SwapButton.addEventListener('click', Swap_out);
 });
 
-// Evento para alternar o tema e salvar a preferência no sessionStorage
-if (themeToggle) {
-    themeToggle.addEventListener('change', function () {
-        applyTheme(); // Aplica o tema baseado no estado do checkbox
-        sessionStorage.setItem('theme', themeToggle.checked ? 'dark' : 'light'); // Salva a preferência
-    });
-}
 
 // Sugestões
 document.addEventListener('DOMContentLoaded', function() {
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => { formulario.style.display = 'none'; }, 300);
         mainElement.classList.remove('main-blur'); // Remove o efeito de blur
         setTimeout(() => { body.classList.remove('formulario-active'); }, 400); // Restaura a rolagem
-    });
+});
 
 
 // FeedBack Response
@@ -148,8 +149,7 @@ form.addEventListener('submit', (e) => {
     }else{
         // Fechar o formulário ao enviar
     const formSubmit = document.querySelector('form');
-    formSubmit.addEventListener('submit', function(event) {
-        event.preventDefault(); // Previne o envio real do formulário para efeitos de demonstração
+    formSubmit.addEventListener('submit', () => {
         formulario.classList.remove('formulario--active');
         setTimeout(() => { formulario.style.display = 'none'; }, 300);
         mainElement.classList.remove('main-blur');
