@@ -343,19 +343,17 @@ margin-bottom: 10px;
     background-color: var(--header-bg);
     border: var(--card-border) 2.5px solid;
 }
-.card strong{
-    font-weight: bold;
+
+.card:hover {
+    width: 300px;
+    height: 350px;
 }
+
 .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
-}
-
-.card:hover {
-    width: 300px;
-    height: 350px;
 }
 
 .card:hover img {
@@ -394,7 +392,9 @@ margin-bottom: 10px;
     background-color: #1c70be;
     cursor: pointer;
 }
-
+.arrow{
+    display: none;
+}
 .resumo{
 width: 75%;
 margin-left:30px;
@@ -477,7 +477,7 @@ line-height: 25px;
 
 /* Media-Query */
 
-@media (max-width:720px) {
+@media (max-width: 768px) {
     .get_name .container {
         position: relative;
         margin: auto;
@@ -499,52 +499,74 @@ line-height: 25px;
     }
     #cards {
         display: flex;
-        gap: 10px;
-    }
-    
-    .card {
-        width: 300px;
-        height: 300px;
-        border-radius: 8px;
-        overflow: visible;
-        background: #212121;
+        flex-direction: row;
+        align-items: center;
         position: relative;
-        transition: width 0.5s ease, height 0.5s ease;
-        background-color: var(--header-bg);
-        border: var(--card-border) 2.5px solid;
     }
-    .card strong{
-        font-weight: bold;
-    }
-    .card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-    
-    .card:hover {
-        width: 300px;
+
+    .card {
+        width: 400px;
         height: 300px;
+        margin: 0;
+        overflow: visible;
+        border: none;
+        transition: none;
     }
-    
+
+    .card:hover .info {
+        transform: none;
+        opacity: none;
+    }
+
     .card:hover img {
         transform: none;
     }
-    
-    .card .info {
-        position: absolute;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.438);
-        color: #fff;
-        width: 100%;
-        padding: 10px;
-        transform: translateY(100%);
-        transition: transform 0.5s ease 0.3s;
-        opacity: 0;
+
+    .card:hover {
+        width: 400px;
+        height: 300px;
     }
-    
-    .card:hover .info {
-        opacity: 0;
+
+    .card img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card .info {
+        display: none; /* Oculta as informações adicionais */
+    }
+
+    .conhecer-btn {
+        position: absolute;
+        display: block;
+        padding: 10px 20px;
+        font-size: 16px;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+    }
+
+    /* Setas para avançar e retroceder */
+    .arrow {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 50px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .arrow.prev {
+        left: -25px;
+    }
+
+    .arrow.next {
+        right: -25px;
     }
 }

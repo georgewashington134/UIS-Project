@@ -151,3 +151,30 @@ form.addEventListener('submit', (e) => {
     }
     })
 });
+
+
+// Navegação mobile dos integrantes da página home
+const isMobile = window.innerWidth <= 768;
+if (isMobile) {
+    let currentCardIndex = 0; // Índice do card atual
+    const cards = document.querySelectorAll("#cards .card");
+
+    // Função para atualizar a visibilidade dos cards
+    function updateCardsVisibility() {
+        cards.forEach((card, index) => {
+            card.style.display = index === currentCardIndex ? "block" : "none"; // Exibe apenas o card atual
+        });
+    }
+    // Função para avançar para o próximo card
+    function nextCard() {
+        currentCardIndex = (currentCardIndex + 1) % cards.length; // Avança circularmente
+        updateCardsVisibility();
+    }
+    // Função para voltar ao card anterior
+    function previousCard() {
+        currentCardIndex = (currentCardIndex - 1 + cards.length) % cards.length; // Retrocede circularmente
+        updateCardsVisibility();
+    }
+    // Inicializa a exibição dos cards
+    updateCardsVisibility();
+}
