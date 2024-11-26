@@ -11,7 +11,7 @@ section{
     display: flex;
     margin: auto;
     width: 85%;
-    height: 470px;
+    height: 500px;
     background-color: var(--bg-color-transparent);
     position: absolute;
     top: 50%;    /* Move 50% para baixo */
