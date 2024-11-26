@@ -49,27 +49,33 @@ window.addEventListener('DOMContentLoaded', () => {
         header.style.display = 'none'
     }
 
-    // Função que desliza a div (.get_name) para fora e salva o nome no sessionStorage
-    function Swap_out() {
-        const user = User_Name.value.trim(); // Remove os espaços em branco
-        if (user !== '') {
-            // Salva o nome do usuário no sessionStorage
-            sessionStorage.setItem('userName', user);
-            // Exibe a mensagem de boas-vindas
-            welcome_h1.innerText = `Bem Vindo ${user}!`;
-            // Usa setTimeout para adicionar a classe 'swapped' com um atraso
-            get_nameDiv.classList.add('swapped') // Adiciona a classe 'swapped' após 1 segundo
-            setTimeout(() => {
-                mainElement.classList.add('PushUp-animation');
-                header.classList.add('PushUp-animation');
-                mainElement.style.display = 'block'
-                header.style.display = 'block'
-                header.style.display = 'flex'
-            }, 500)
-        } else {
-            window.alert("Insira seu nome.");
-        }
+// Função que desliza a div (.get_name) para fora e salva o nome no sessionStorage
+function Swap_out() {
+    const user = User_Name.value.trim(); // Remove os espaços em branco
+    if (user !== '') {
+        // Detecta se é um dispositivo mobile
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        // Salva o nome do usuário no sessionStorage
+        sessionStorage.setItem('userName', user);
+
+        // Define a mensagem de boas-vindas
+        welcome_h1.innerText = isMobile ? 'Bem Vindo!' : `Bem Vindo ${user}!`;
+
+        // Usa setTimeout para adicionar a classe 'swapped' com um atraso
+        get_nameDiv.classList.add('swapped'); // Adiciona a classe 'swapped' após 1 segundo
+        setTimeout(() => {
+            mainElement.classList.add('PushUp-animation');
+            header.classList.add('PushUp-animation');
+            mainElement.style.display = 'block';
+            header.style.display = 'flex';
+        }, 500);
+    } else {
+        window.alert("Insira seu nome.");
     }
+}
+
+
 
 
     // Evento de clique para o botão SwapButton
