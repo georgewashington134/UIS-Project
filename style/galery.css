@@ -166,6 +166,11 @@ footer{
 
 /* Media Query */
 @media (max-width:768px) {
+    .galery-visible {
+        top: 5rem;
+        width: 300px;
+        height: 365px;
+    }
     .galery_images {
         display: flex;
         width: 100%;
