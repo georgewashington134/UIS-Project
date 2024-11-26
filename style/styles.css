@@ -549,8 +549,9 @@ line-height: 25px;
     }
 
     .card .info {
-        transform: translateY(-10%);
+        transform: translateY(0);
         opacity: 1;
+        height: 85px;
     }
 
     .card:hover img {
@@ -571,17 +572,17 @@ line-height: 25px;
         transition: all 0.3s ease-in-out;
     }
 
-    .card .info {
+    .card .info >p{
         display: none; /* Oculta as informações adicionais */
     }
 
     .conhecer-btn {
         position: absolute;
         display: block;
-        padding: 10px 20px;
-        font-size: 16px;
-        top: 10px;
-        left: 10px;
+        padding: 8px 15px;
+        font-size: 14px;
+        top: 35px;
+        left: 5px;
         z-index: 1000;
     }
 
