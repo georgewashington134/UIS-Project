@@ -539,8 +539,8 @@ line-height: 25px;
         transition: none;
     }
 
-    .info {
-        transform: translateY(0);
+    .card .info {
+        transform: translateY(-10%);
         opacity: 1;
     }
 
