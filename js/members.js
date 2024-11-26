@@ -7,9 +7,9 @@ const galeryContent = document.querySelector('.galery');
 // Seleciona a lista de imagens na galeria
 const galleryImages = document.querySelector('.galery_images ul'); 
 // Seleciona a seta para mover à esquerda
-const leftArrow = document.querySelector('.arrow.left'); 
+const leftArrow = document.querySelector('.left'); 
 // Seleciona a seta para mover à direita
-const rightArrow = document.querySelector('.arrow.right'); 
+const rightArrow = document.querySelector('.right'); 
 // Índice que rastreia a imagem atualmente visível
 let currentIndex = 0; 
 

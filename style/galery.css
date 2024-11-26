@@ -83,7 +83,7 @@ footer{
     right: 0.7rem;
     z-index: 9999;
     border-radius: 5px;
-    overflow: auto;
+    overflow: hidden;
     padding-left: 40px;
     padding-right: -40px;
     transition: all 0.5s ease-in-out;
@@ -97,7 +97,7 @@ footer{
 .galery_images {
     display: flex;
     width: 100%;
-    overflow: auto; /* Garante que apenas uma parte do conteúdo seja visível */
+    overflow: hidden; /* Garante que apenas uma parte do conteúdo seja visível */
 }
 .galery_images ul {
     display: flex;
@@ -122,17 +122,30 @@ footer{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 20rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+.left {
+    left: -3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 2rem;
     padding: 10px;
     cursor: pointer;
-    z-index: 10000;
-    user-select: none;
+    z-index: 10;
 }
-.arrow.left {
-    left: -3px;
-}
-.arrow.right {
+.right {
     right: -3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
 }
 .arrow:hover {
     color: aquamarine;
@@ -156,7 +169,7 @@ footer{
     .galery_images {
         display: flex;
         width: 100%;
-        overflow: hidden;
+        overflow: auto;
     }
     html{
         overflow: hidden;
