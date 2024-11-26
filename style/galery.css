@@ -125,7 +125,7 @@ footer{
     font-size: 2rem;
     padding: 10px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 10000;
     user-select: none;
 }
 .arrow.left {
