@@ -488,13 +488,63 @@ line-height: 25px;
         left: 0px;
         top: -100px;
     }
-
+    .welcome{
+        font-size: 1.3rem;
+    }
     footer > p{
         display: none;
     }
     footer{
         height: 50px;
     }
-    .welcome{
+    #cards {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .card {
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        overflow: visible;
+        background: #212121;
+        position: relative;
+        transition: width 0.5s ease, height 0.5s ease;
+        background-color: var(--header-bg);
+        border: var(--card-border) 2.5px solid;
+    }
+    .card strong{
+        font-weight: bold;
+    }
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .card:hover {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .card:hover img {
+        transform: none;
+    }
+    
+    .card .info {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.438);
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+        transform: translateY(100%);
+        transition: transform 0.5s ease 0.3s;
+        opacity: 0;
+    }
+    
+    .card:hover .info {
+        opacity: 0;
     }
 }

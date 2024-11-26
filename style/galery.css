@@ -40,9 +40,11 @@ footer{
     top: -20px;
 }
 .about > h2{
-    font-size: 1.8rem;
+    font-size: 1.9rem;
 }
-
+.about > p{
+    font-size: 1.1rem;
+}
 .profile-picture {
     position: absolute;
     width: 200px;
