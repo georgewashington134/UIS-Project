@@ -149,3 +149,72 @@ footer{
 .close-window:hover{
     color: aquamarine;
 }
+
+
+/* Media Query */
+@media (max-width:768px) {
+    .galery_images {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+    html{
+        overflow: hidden;
+    }
+    
+    .theme-checkbox {
+        margin-top: 8px;
+    }
+    header {
+        background-color: var(--header-bg);
+        padding: 1em 2em;
+        display: flex
+    ;
+        justify-content: end;
+        align-items: center;
+        border-bottom: 2px solid var(--text-color);
+    }
+    header>h1{
+        display: none;
+    }
+    section{    
+    position: absolute;
+    display: flex;
+    margin: auto;
+    width: 85%;
+    height: 450px;
+    background-color: var(--bg-color-transparent);
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    box-shadow: #000000ba 5px 7px 7px 3px;
+    top: 380px;
+}
+.about > h1{
+    position: relative;
+    left: 60px;
+    font-size: 1.7rem;
+}
+.about > h2{
+    font-size: 1.5rem;
+}
+.about > p{
+    height: fit-content;
+    max-height:70px ;
+    overflow: auto;
+    font-size: 1rem;
+}
+.profile-picture {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #212121;
+    transition: width 0.5s ease, height 0.5s ease;
+    background-color: var(--header-bg);
+    border: var(--card-border) 2.5px solid;
+    top: -70px;
+    left: 20px;
+    box-shadow: #000000ba 5px 5px 5px 3px;
+}
+}
