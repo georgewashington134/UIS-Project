@@ -97,7 +97,7 @@ footer{
 .galery_images {
     display: flex;
     width: 100%;
-    overflow: hidden; /* Garante que apenas uma parte do conteúdo seja visível */
+    overflow: auto; /* Garante que apenas uma parte do conteúdo seja visível */
 }
 .galery_images ul {
     display: flex;
