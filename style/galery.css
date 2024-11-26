@@ -1,4 +1,4 @@
-/*HTML Marks*/
+
 main{
     background-position: center;
     background-repeat: no-repeat;
@@ -24,8 +24,6 @@ section{
 footer{
     background-color: var(--footer-bg-transparent);
 }
-
-/*About*/
 .about{
     display: flex;
     position: absolute;
@@ -40,14 +38,11 @@ footer{
     font-weight: bold;
     position: relative;
     top: -20px;
-    text-shadow:#000000ba 5px 5px 7px;
-
 }
 .about > h2{
     font-size: 1.8rem;
 }
 
-/* Profile Picture */
 .profile-picture {
     position: absolute;
     width: 200px;
@@ -74,8 +69,6 @@ footer{
 .profile-picture:hover img {
     transform: scale(1.1);
 }
-
-/*Galery*/
 
 .galery {
     position: absolute;

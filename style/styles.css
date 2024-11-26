@@ -73,7 +73,7 @@
     --sugestion:#27689c;
 }
 
-/* First Interaction (Get User Name) */
+/* primeira interação (Get User Name) */
 .get_name{
     background-color: var(--bg-color);
     width: 100%;
@@ -108,7 +108,7 @@
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-/* Button */
+/* botão */
 .btn {
     outline: 0;
     align-items: center;
@@ -155,7 +155,6 @@
     justify-content: space-between;
 }
 
-/* "fade-out" */
 .get_name.swapped{
     transform: translateY(-2100px);
     height: 0px;
@@ -227,11 +226,17 @@ footer {
     ;
 }
 
-/* GitHub -icon */
+/* Icons */
 .git-hub-icon{
     position: absolute;
     width: 40px;
     right: 0.7rem;
+    bottom: 0.3rem;
+}
+.e-mail{
+    position: absolute;
+    width: 50px;
+    right: 3.5rem;
     bottom: 0.3rem;
 }
 /* Formulário (Sugestões) */
@@ -467,4 +472,27 @@ line-height: 25px;
 /* Classe de animação para o elemento main */
 .PushUp-animation {
     animation: pushUp 1s ease-out forwards; /* 1s de duração com efeito 'ease-out' */
+}
+
+
+/* Media-Query */
+
+@media (max-width:720px) {
+    .get_name .container {
+        position: relative;
+        margin: auto;
+        text-align: center;
+        bottom: 50px;
+        width: fit-content;
+        line-height: 40px;
+        left: 0px;
+        top: -100px;
+    }
+
+    footer > p{
+        display: none;
+    }
+    footer{
+        height: 50px;
+    }
 }
