@@ -478,6 +478,32 @@ line-height: 25px;
 /* Media-Query */
 
 @media (max-width: 768px) {
+
+    .e-mail {
+        position: absolute;
+        width: 50px;
+        right: 55%;
+        bottom: 0.3rem;
+    }
+
+    .git-hub-icon {
+        position: absolute;
+        width: 40px;
+        right: 35%;
+        bottom: 0.3rem;
+    }
+    .resumo {
+        width: 90%;
+        height: 100%;
+        margin-left: 30px;
+        text-align: justify;
+        line-height: 25px;
+        overflow: auto;
+    }
+    .resumo > p{
+        height: 80%;
+        text-overflow: ellipsis;
+    }
     .get_name .container {
         position: relative;
         margin: auto;
@@ -505,7 +531,7 @@ line-height: 25px;
     }
 
     .card {
-        width: 400px;
+        width: 350px;
         height: 300px;
         margin: 0;
         overflow: visible;
@@ -513,17 +539,17 @@ line-height: 25px;
         transition: none;
     }
 
-    .card:hover .info {
-        transform: none;
-        opacity: none;
+    .info {
+        transform: translateY(0);
+        opacity: 1;
     }
 
     .card:hover img {
-        transform: none;
+        transform: scale(1);
     }
 
     .card:hover {
-        width: 400px;
+        width: 350px;
         height: 300px;
     }
 
@@ -560,6 +586,7 @@ line-height: 25px;
         background: none;
         border: none;
         cursor: pointer;
+        user-select: none;
     }
 
     .arrow.prev {
