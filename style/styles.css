@@ -45,9 +45,12 @@
 
 .light-theme {
     --bg-color: #f5f5f5;
+    --bg-color-transparent: #f5f5f5b0;
     --text-color: #333;
     --header-bg: #ffffff;
+    --header-color-transparent: #f5f5f500;
     --footer-bg: #dddddd;
+    --footer-bg-transparent: #dddddd83;
     --link-color: #333;
     --button-bg: #212121;
     --button-color: #ffffff;
@@ -57,9 +60,12 @@
 
 .dark-theme {
     --bg-color: #212121;
+    --bg-color-transparent: #212121dc;
     --text-color: #ffffff;
     --header-bg: #141414;
+    --header-color-transparent: #2121218c;
     --footer-bg: #1b1b1b;
+    --footer-bg-transparent: #1b1b1b7c;
     --link-color: #f5f5f5;
     --button-bg: #24aeee;
     --button-color: #212121;
@@ -285,6 +291,7 @@ textarea {
     border-radius: 10px;
     box-shadow: #000000b2 4px 7px 0px 0px;
     margin-bottom: 30px;
+    font-size: 1.4rem;
 }
 .formulario textarea::placeholder {
     font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */

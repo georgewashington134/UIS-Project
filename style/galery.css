@@ -12,12 +12,17 @@ section{
     margin: auto;
     width: 85%;
     height: 350px;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-transparent);
     position: absolute;
     top: 50%;    /* Move 50% para baixo */
     left: 50%;   /* Move 50% para a direita */
     transform: translate(-50%, -50%); /* Ajusta para o centro exato */
     border-radius: 6px;
+    box-shadow:#000000ba 5px 7px 7px 3px;
+}
+
+footer{
+    background-color: var(--footer-bg-transparent);
 }
 
 /*About*/
@@ -35,6 +40,8 @@ section{
     font-weight: bold;
     position: relative;
     top: -20px;
+    text-shadow:#000000ba 5px 5px 7px;
+
 }
 .about > h2{
     font-size: 1.8rem;
@@ -53,6 +60,7 @@ section{
     border: var(--card-border) 2.5px solid;
     top: -70px;
     left: 20px;
+    box-shadow:#000000ba 5px 5px 5px 3px;
 }
 .profile-picture strong{
     font-weight: bold;
