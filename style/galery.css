@@ -83,7 +83,7 @@ footer{
     right: 0.7rem;
     z-index: 9999;
     border-radius: 5px;
-    overflow: hidden;
+    overflow: auto;
     padding-left: 40px;
     padding-right: -40px;
     transition: all 0.5s ease-in-out;
@@ -97,7 +97,7 @@ footer{
 .galery_images {
     display: flex;
     width: 100%;
-    overflow: hidden; /* Garante que apenas uma parte do conteúdo seja visível */
+    overflow: auto; /* Garante que apenas uma parte do conteúdo seja visível */
 }
 .galery_images ul {
     display: flex;
